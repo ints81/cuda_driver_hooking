@@ -9,5 +9,8 @@ int main() {
 
     cudaMalloc(&d_x, 1024*8*sizeof(float));
 
+    std::cout << "testing cudaFree..." << std::endl;
+    cudaFree(&d_x);
+
     return 0;
 }

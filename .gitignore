@@ -1,2 +1,4 @@
 *.so
 test
+conv_test
+debug.log
