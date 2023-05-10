@@ -9,7 +9,9 @@ nvcc -shared -lcuda -ldl --compiler-options '-fPIC' hook.cpp -o hook.so
 
 # Make executable file
 nvcc -lcuda test.cu -o test
+nvcc -lcuda -lcudnn -o conv_test conv_test.cu
 
 # Execute with LD_PRELOAD
 LD_PRELOAD=./hook.so ./test
+LD_PRELOAD=./hook.so python torch_conv_test.py
 ```
