@@ -83,7 +83,10 @@ CUresult cuLaunchKernel_custom(CUfunction f,
     if (cu_func_map.find(f) != cu_func_map.end()) {
         std::string cu_func_name = cu_func_map.find(f)->second;
         
-        if (cu_func_name.find("cudnn") != std::string::npos || cu_func_name.find("conv") != std::string::npos || cu_func_name.find("elementwise") != std::string::npos) {
+        if (cu_func_name.find("cudnn") != std::string::npos 
+           || cu_func_name.find("conv") != std::string::npos 
+           || cu_func_name.find("gemm") != std::string::npos
+           || cu_func_name.find("elementwise") != std::string::npos) {
             std::cout << "Function Name : " << cu_func_name << std::endl;
 
             // std::cout << "BEFORE" << std::endl;

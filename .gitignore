@@ -1,4 +1,8 @@
 *.so
+*.nsys-rep
+*.ncu-rep
+*.nvprof
+
 test
 conv_test
 debug.log

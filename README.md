@@ -13,5 +13,5 @@ nvcc -lcuda -lcudnn -o conv_test conv_test.cu
 
 # Execute with LD_PRELOAD
 LD_PRELOAD=./hook.so ./test
-LD_PRELOAD=./hook.so python torch_conv_test.py
+LD_PRELOAD=./hook.so python torch_op_test.py
 ```
